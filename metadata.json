@@ -1,0 +1,10 @@
+{
+  "name": "Movie Analyser",
+  "description": "Netflix Movies & TV Shows Analytics, Recommendation & Genre Prediction System",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
