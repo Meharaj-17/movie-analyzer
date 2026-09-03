@@ -1,7 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const TMDB_API_KEY = "410333becacc4d8177719418bdf7ebe9";
+require('dotenv').config();
+const TMDB_API_KEY = process.env.TMDB_API_KEY;
 
 async function fetchMovies() {
   let movies = [];

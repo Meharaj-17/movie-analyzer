@@ -386,7 +386,7 @@ app.get("/api/ai/insight", async (req, res) => {
 // GET /api/poster - Fetches TMDB poster and redirects
 app.get("/api/poster", async (req, res) => {
   const title = req.query.title as string;
-  const tmdbApiKey = process.env.TMDB_API_KEY || "410333becacc4d8177719418bdf7ebe9";
+  const tmdbApiKey = process.env.TMDB_API_KEY;
   
   const fallbackUrl = "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80&w=500";
   
@@ -421,7 +421,7 @@ app.get("/api/poster", async (req, res) => {
 // GET /api/banner - Fetches TMDB backdrop and redirects
 app.get("/api/banner", async (req, res) => {
   const title = req.query.title as string;
-  const tmdbApiKey = process.env.TMDB_API_KEY || "410333becacc4d8177719418bdf7ebe9";
+  const tmdbApiKey = process.env.TMDB_API_KEY;
   
   const fallbackUrl = "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80&w=800&h=400";
   
@@ -456,7 +456,7 @@ app.get("/api/banner", async (req, res) => {
 // GET /api/streaming - Fetches watch providers from TMDB
 app.get("/api/streaming", async (req, res) => {
   const title = req.query.title as string;
-  const tmdbApiKey = process.env.TMDB_API_KEY || "410333becacc4d8177719418bdf7ebe9";
+  const tmdbApiKey = process.env.TMDB_API_KEY;
   
   if (!title) {
     return res.status(400).json({ error: "Title required" });
